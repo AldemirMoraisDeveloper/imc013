@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+:root {
+
+    --cor01: #fff;
+    --cor04: #000;
+    --cor05: #889D9B;
+    --cor06: #889d9b30;
+    --cor07: #023700;
+
+    --fonte-padrao: 'Roboto', sans-serif; 
+}
+
+body {
+    background-image: url('./images/image-nutri.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: var(--cor01);
+    font-family: var(--fonte-padrao);
+}
+
+#formulario {
+    background-color: var(--cor06);
+    max-width: 300px;
+    height: 280px;
+    margin: 100px auto;
+    padding: 1rem;
+    border: 2px solid var(--cor07);
+    border-radius: 8px;
+    animation: animacao ease-in alternate 2.5s;
+   
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@keyframes animacao {
+    to {
+        transform: scale(180deg);
+    }from {
+        transform: scale(0);
+    }
+}
+
+.sub-title {
+    color: var(--cor07);
+    
+}
+
+#label {
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+input[type="text"] {
+    height: 40px;
+    background: 0;
+    border: 1px solid var(--cor05);
+}
+
+input[type="text"]::placeholder {
+    color: var(--cor04);
+}
+
+input[type="text"]:focus {
+    border: 1px solid var(--cor07);
+}
+
+input[type="submit"] {
+    margin-top: 18px;
+    height: 40px;
+    background-color: var(--cor06);
+    font-size: 18px;
+    border: 1px solid var(--cor07);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--cor07);
+    color: var(--cor01);
+}
+
+.result {
+    max-width: 300px;
+    height: 70px;
+    border: 1px solid var(--cor07);
+    margin: auto;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--cor02);
+    font-weight: bold;
+    
+}
+
+@media (max-width: 450px) {
+    .result {
+        margin-left: 12%;
+    }
+}
